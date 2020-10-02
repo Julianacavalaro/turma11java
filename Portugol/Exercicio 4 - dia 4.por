@@ -24,6 +24,9 @@ programa
 		 	
 		 	para(c=0 ; c<3 ; c++){
 		 		soma = (soma)+(mat[l][c])
+		 		se( l==c){
+		 			somaDiagonal = (somaDiagonal)+(mat[l][c])
+		 		}
 		 		
 			}
 		
@@ -42,7 +45,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 0; 
+ * @POSICAO-CURSOR = 335; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

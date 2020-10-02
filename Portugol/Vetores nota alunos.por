@@ -7,7 +7,7 @@ programa
 		//Declaração de variável
 		cadeia alunos[4]
 		real notas[4]
-		real maiorNota = 0
+		real maiorNota = 0.0
 		
 
 		//Entrada,Processamento e Saída
@@ -57,7 +57,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 778; 
+ * @POSICAO-CURSOR = 141; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
