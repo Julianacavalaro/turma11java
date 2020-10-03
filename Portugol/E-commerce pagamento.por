@@ -1,8 +1,12 @@
 programa
 {
-	
+	funcao pulalinha()
+	{
+		escreva("\n")
+	}
 	funcao inicio()
 	{
+		
 		/*
 		 * 1-	Elabore um programa que calcule o que deve ser pago por um produto,
 		 * considerando o preço normal de etiqueta e a escolha da condição de pagamento
@@ -21,6 +25,7 @@ programa
 		inteiro x
 		inteiro codigo
 		inteiro pgto
+		real novoPreco = 0
 		para (x = 0; x<LIMITE;x++)
 		{
 			escreva("Codigo produto ",x+1," ",produtos[x],"  R$ ",precos[x])
@@ -39,19 +44,33 @@ programa
 		escreva("4 Em três vezes, preço normal de etiqueta mais juros de 10%\n")
 		escreva("Digite o numero da opcao:")
 		leia(pgto)
-		
+
+	
+		se (pgto == 1){
+			novoPreco = precos[codigo]*0.8
+			escreva("Preço novo com desconto: "+novoPreco)
+		}
+		senao se (pgto == 2){
+			novoPreco = precos[codigo]*0.85
+			escreva("Preço novo com desconto: "+novoPreco)
+		}
+		senao se (pgto == 3){
+			escreva("Mesmo preço: "+precos[codigo])
+		}
+		senao se (pgto == 4){
+			novoPreco = precos[codigo]*1.10
+			escreva("Preço novo com juros: "+novoPreco)
+		}
 	}
-	funcao pulalinha()
-	{
-		escreva("\n")
-	}
+				
+	
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1517; 
+ * @POSICAO-CURSOR = 80; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
