@@ -18,7 +18,7 @@ programa
 	leia(valorUsuario)
 
 	parImpar(valorUsuario)
-	parImpar(13)
+
 	
 	}
 	funcao parImpar(inteiro valorUsuario)
@@ -30,7 +30,7 @@ programa
 			escreva("\nO valor "+valorUsuario+" é negativo")
 		}
 		senao {
-			escreva("\nO valor "+valorUsuario+" é positivo e diferente de zero")
+			escreva("\nO valor "+valorUsuario+" é positivo ")
 			se (valorUsuario % 2 == 0) {
 				escreva("\nO número "+valorUsuario+" é par")
 			}
@@ -46,7 +46,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 800; 
+ * @POSICAO-CURSOR = 620; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

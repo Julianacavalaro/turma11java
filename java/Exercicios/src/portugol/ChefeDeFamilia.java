@@ -7,7 +7,7 @@ public class ChefeDeFamilia {
 		//G7
 		
 		int idade = 0, ano, verificador = 0;
-		char sexo = 'F';
+		char sexo = ' ';
 		boolean chefeDeFamilia;
 		String nome;
 		
@@ -33,7 +33,7 @@ public class ChefeDeFamilia {
 		}
 			
 		
-		System.out.println("Você é chefe de família?");
+		System.out.println("Você é chefe de família? true ou false: ");
 		chefeDeFamilia = entrada.nextBoolean();		
 		
 		entrada.close();
