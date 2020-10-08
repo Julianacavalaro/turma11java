@@ -17,7 +17,7 @@ public class Exercicio3 {
 		while(idade!=-99) {
 			System.out.print("Escreva uma idade: ");
 			idade = leia.nextInt();
-			if (idade<21) {
+			if ((idade<21) && (idade!=-99) ) {
 				menor21 = (menor21 +1);
 			}
 			else if (idade>50) {
@@ -25,7 +25,7 @@ public class Exercicio3 {
 			}
 			
 		}
-		System.out.printf("\nTotal de pessoas com menos de 21 anos: %d",(menor21-1));
+		System.out.printf("\nTotal de pessoas com menos de 21 anos: %d",(menor21));
 		System.out.printf("\nTotal de pessoas com mais de 50 anos: %d",maior50);
 		
 		leia.close();

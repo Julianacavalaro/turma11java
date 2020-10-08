@@ -19,12 +19,12 @@ public class Exercicio6 {
 		do {
 		System.out.print("Digite um número: ");
 		a = leia.nextInt();
-		if ( a%3 == 0 ) {
+		if ( a%3 == 0  && a!=0) {
 		soma = soma + a;
 		cont = cont + 1;
 		}
 	}while(a!=0);
-		total = (soma/(cont-1));
+		total = (soma/(cont));
 		System.out.printf("\nA média dos números múltiplos de 3 é: %.2f ", total );
 
 	}
