@@ -18,11 +18,11 @@ public class Exercicio4 {
 		 */
 
 		
-		int idade =0, sexo =0, humor =0, calmas =0, mulherNervosa =0, homemAgressivo =0, outrosCalmxs =0, mais40Nerv =0, menos18Calmas =0, contador =0;
+		int idade =0, sexo =0, humor =0, calmas =0, mulherNervosa =0, homemAgressivo =0, outrosCalmxs =0, mais40Nerv =0, menos18Calmas =0, contador =1;
 		
 		Scanner leia = new Scanner(System.in);
 		
-		while(contador <=2)
+		while(contador <=150)
 		{
 			
 			
