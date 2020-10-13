@@ -30,7 +30,7 @@ public class Exercicio4 {
 
 			}
 		}
-		System.out.println("\t Matriz [2][2] \t");
+		System.out.println("\t Matriz 1 \t");
 		for(int linha=0 ; linha < 2 ; linha++) {
 			for(int coluna=0 ; coluna<2 ; coluna++) {
 				System.out.printf("\t %.2f\t", matriz[linha][coluna]);
@@ -38,7 +38,7 @@ public class Exercicio4 {
 			System.out.println();
 
 	}
-	System.out.println(" \t Matriz 1 \t ");
+	System.out.println(" \t Matriz 2 \t ");
 		
 		for(int linha=0 ; linha < 2 ; linha++) {
 			for(int coluna=0 ; coluna<2 ; coluna++) {
