@@ -15,7 +15,7 @@ public class Exercicio1 {
 		
 		
 		Scanner leia = new Scanner(System.in);
-		Cliente cliente = new Cliente();
+		Cliente cliente = new Cliente("Ju", 'F', 1980);
 		
 		System.out.println("Digite o seu nome: ");
 		cliente.nome = leia.next();
@@ -32,17 +32,18 @@ public class Exercicio1 {
 		System.out.println("Digite seu email: ");
 		cliente.email = leia.next();
 		
-		System.out.println("Digite sua idade: ");
-		cliente.idade = leia.nextInt();
+		System.out.println("Digite o ano de nascimento: ");
+		cliente.anoNascimento = leia.nextInt();
 		
 		System.out.println("Dados do Cliente: ");
 		System.out.println("Nome: " + cliente.nome);
 		System.out.print("Sexo: ");
 		System.out.println((cliente.sexo=='F')?"Feminino":(cliente.sexo=='M')?"Masculino":"Outros");
-		System.out.println("Idade: " +cliente.idade);
+		System.out.println("Idade: " +cliente.idade());
 		System.out.println("Cidade : " + cliente.cidade);
 		System.out.println("Empresa : " + cliente.empresa);
 		System.out.println("Email: " +cliente.email);
+		System.out.println("");
 	}
 
 }
