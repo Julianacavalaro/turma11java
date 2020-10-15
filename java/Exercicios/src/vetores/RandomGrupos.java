@@ -32,10 +32,10 @@ public class RandomGrupos {
 		while(true) {
 			
 			Scanner entrada = new Scanner(System.in);
-			System.out.print("Qual é o tamanho do grupo? (min = 3; max = 6)");
+			System.out.print("Qual é o tamanho do grupo? (min = 2; max = 8)");
 			tamanho = entrada.nextInt();
 			
-			if(tamanho>6 || tamanho<3) {
+			if(tamanho>8 || tamanho<2) {
 					
 				System.out.println("Tamanho do grupo está fora do intervalo [3,6]");
 			}else {
