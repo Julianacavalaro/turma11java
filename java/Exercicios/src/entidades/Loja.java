@@ -13,7 +13,7 @@ public class Loja {
 		
 		//INSTANCIAR
 		ClienteExercicio cliente1 = new ClienteExercicio("Juliana", 'F', 1991);
-		ClienteExercicio cliente2 = new ClienteExercicio("Jonhatan", 'M');
+		//ClienteExercicio cliente2 = new ClienteExercicio("Jonhatan", 'M');
 		ClienteExercicio cliente3 = new ClienteExercicio("Zaine", 'F' , 1991);
 		
 		System.out.println("Digite o nome do usuario: ");
@@ -22,7 +22,7 @@ public class Loja {
 		System.out.println(cliente3.nome);
 		System.out.println(cliente1.idade()+" "+ cliente1.nome +" "+ cliente1.sexo);
 		
-
+		leia.close();
 	}
 	
 }
