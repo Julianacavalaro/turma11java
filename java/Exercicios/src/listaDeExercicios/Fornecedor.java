@@ -12,6 +12,7 @@ public class Fornecedor extends Pessoa {
 	public Fornecedor() {
 		super();
 	}
+	
 
 
 	public Fornecedor(String nome, int telefone, double valorCredito, double valorDivida) {

@@ -13,17 +13,14 @@ public class Exercicio2 {
 		 *  teste adequado que lhe permita verificar o funcionamento dos métodos implementados na classe Fornecedor e 
 		 *  os herdados da classe Pessoa. 
 		 */
-		Pessoa pessoaQualquer = new Pessoa("Ed", 34210977);
-		Fornecedor fornecedor1 = new Fornecedor("Magazine", 434343);
+		//Pessoa pessoaQualquer = new Pessoa("Ed", 34210977);
+		//Fornecedor fornecedor1 = new Fornecedor("Magazine", 434343);
 		Fornecedor fornecedor2 = new Fornecedor("Casas Bahia", 434343, 10002.3 , 50.55);
 		
 		fornecedor2.setValorDivida(500.98);
 		
 		System.out.println("Saldo da "+fornecedor2.getNome()+" "+fornecedor2.obterSaldo());
 		
-		
-		
-
 	}
 
 }
