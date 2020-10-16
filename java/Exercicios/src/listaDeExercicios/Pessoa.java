@@ -6,6 +6,7 @@ public class Pessoa {
 	private String endereco;
 	private int telefone;
 	
+	
 	//CONSTRUTOR PADRÃO-> (vazia) (mesmo nome da classe)
 	public Pessoa () {
 	}
@@ -29,7 +30,9 @@ public class Pessoa {
 		this.telefone = telefone;
 	}
 	
-	//METODO GET E SET (ENCAPSULAMENTO)
+	//ENCAPSULAMENTO = DEIXAR OS DADOS SEGUROS
+	//METODO GET E SET
+	
 	public String getNome() {
 		return nome;
 	}
@@ -48,7 +51,15 @@ public class Pessoa {
 	public void setTelefone(int telefone) {
 		this.telefone = telefone;
 	}
+	//MEUS METODOS MINHAS REGRAS
 	
-	
-
+	public int idade() {
+		int idade;
+		idade = 2020 - this.getAnoNascimento();
+		return idade;
+	}
+	private int getAnoNascimento() {
+		int anoNascimento = 1991;
+		return anoNascimento;
+	}
 }
