@@ -13,9 +13,12 @@ public class Cachorro extends Animal {
 		this.somCachorro = somCachorro;
 		this.acaoCachorro = acaoCachorro;
 	}
+	public String getNome() {
 
+	return "Nome do animal: "+super.getNome()+"\nIdade: "+super.getIdade();
+	}
 	public String getSomCachorro() {
-		return somCachorro;
+		return "Au au au!";
 	}
 
 	public void setSomCachorro(String somCachorro) {
@@ -23,7 +26,7 @@ public class Cachorro extends Animal {
 	}
 
 	public String getAcaoCachorro() {
-		return acaoCachorro;
+		return "Correr";
 	}
 
 	public void setAcaoCachorro(String acaoCachorro) {
@@ -34,9 +37,6 @@ public class Cachorro extends Animal {
 	public void emitirSom()
 	{
 		System.out.println("Au au au!");
-	}
-	public void emitirAcao() {
-		System.out.println("Correr");
 	}
 
 }

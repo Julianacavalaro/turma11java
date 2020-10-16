@@ -14,8 +14,13 @@ public class Preguica extends Animal{
 		this.acaoPreguica = acaoPreguica;
 	}
 
+	public String getNome() {
+
+		return "Nome do animal: "+super.getNome()+"\nIdade: "+super.getIdade();
+		}
+	
 	public String getSomPreguica() {
-		return somPreguica;
+		return "Zzzzzz";
 	}
 
 	public void setSomPreguica(String somPreguica) {
@@ -23,7 +28,7 @@ public class Preguica extends Animal{
 	}
 
 	public String getAcaoPreguica() {
-		return acaoPreguica;
+		return "Subir em árvore";
 	}
 
 	public void setAcaoPreguica(String acaoPreguica) {
@@ -33,9 +38,6 @@ public class Preguica extends Animal{
 	public void emitirSom()
 	{
 		System.out.println("Zzzzzz");
-	}
-	public void emitirAcao() {
-		System.out.println("Subir em árvore");
 	}
 	
 }

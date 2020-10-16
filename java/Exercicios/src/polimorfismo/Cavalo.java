@@ -22,10 +22,18 @@ public class Cavalo extends Animal{
 		this.somCavalo = somCavalo;
 	
 	}
+	
+	public Cavalo(String nome, int idade) {
+		super(nome, idade);
+	}
 
+
+	public String getNome() {
+		return "Nome do animal: "+super.getNome()+"\nIdade: "+super.getIdade();
+		}
 
 	public String getSomCavalo() {
-		return somCavalo;
+		 return "Rrrrrrrrrr!";
 	}
 
 
@@ -35,21 +43,17 @@ public class Cavalo extends Animal{
 
 
 	public String getAcaoCavalo() {
-		return acaoCavalo;
+		return "Correr Trotar";
 	}
-
-
-
 	public void setAcaoCavalo(String acaoCavalo) {
 		this.acaoCavalo = acaoCavalo;
+	}
+	public String setAcaoCavalo() {
+		return "Correr Trotar";
 	}
 	//MEUS METODOS MINHAS REGRAS
 	public void emitirSom()
 	{
 		System.out.println("Rrrrrrrrrr!");
 	}
-	public void emitirAcao() {
-		System.out.println("Correr Trotar");
-	}
-	
 }

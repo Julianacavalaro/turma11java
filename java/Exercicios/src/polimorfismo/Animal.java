@@ -33,11 +33,7 @@ public class Animal {
 	}
 
 	//MEUS METODOS MINHAS REGRAS
-	public void emiteNomeEIdade(String nome, int idade) {
-		
-		System.out.println("Nome do animal: "+ nome +"\nIdade do animal: "+ idade);
-		
-	}
+
 	
 	
 }
