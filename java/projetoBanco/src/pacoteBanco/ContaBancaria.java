@@ -33,6 +33,12 @@ public class  ContaBancaria {
 		super();
 		this.saldo = saldo;
 	}
+	
+
+	public ContaBancaria(String nome) {
+		super();
+		this.nome = nome;
+	}
 
 	//ENCAPSULAMENTO = DEIXAR OS DADOS SEGUROS
 	//METODO GET E SET

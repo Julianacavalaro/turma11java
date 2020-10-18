@@ -60,7 +60,10 @@ public class ContaPoupanca extends ContaBancaria {
 		return  "\t\tContaBancaria\n[nome: " + super.getNome() + ", numero: " + super.getNumero() + " saldo: " + super.getSaldo() + "]";
 	}
 	public double ganhoAniversario(double saldo) {
-		return super.getSaldo()*1.05;
+		return super.getSaldo()*0.03;
+	}
+	public double ganhoJuros(double saldo) {
+		return super.getSaldo()*0.003;
 	}
 	
 	
