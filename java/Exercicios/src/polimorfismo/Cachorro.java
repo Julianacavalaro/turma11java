@@ -21,7 +21,7 @@ public class Cachorro extends Animal {
 		return "Au au au!";
 	}
 
-	public void setSomCachorro(String somCachorro) {
+	public void setSom(String som) {
 		this.somCachorro = somCachorro;
 	}
 
