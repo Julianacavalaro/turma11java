@@ -8,7 +8,7 @@ public class CadEscolar {
 	public static void main(String[] args) {
 		
 		Scanner leia = new Scanner(System.in);
-		//ATENÇÃO leia é o OBJETO ||
+		//ATENÇÃO leia é o OBJETO || Instanciar o objeto LEIA
 		
 		// Instanciando o professor
 		Professor primeiro = new Professor(); //ctrl shift o para importar
@@ -22,6 +22,7 @@ public class CadEscolar {
 		
 		System.out.print("Digite o nome do professor: ");
 		primeiro.nome = leia.next();       // nome é ATRIBUTO 
+		primeiro.nome ="Teste";
 		
 		System.out.print("Digite 'M' para sexo masculino, 'F' para sexo feminino ou 'O' para outros: ");
 		primeiro.sexo = leia.next().toUpperCase().charAt(0);

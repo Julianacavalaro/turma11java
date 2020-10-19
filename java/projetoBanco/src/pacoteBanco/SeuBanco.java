@@ -27,8 +27,8 @@ public class SeuBanco {
 	
 		char opc =' ';
 		char opcT=' ';
-		int numTalao = 10;
-		int n = 1;
+		int numTalao = 0;
+		corrente.setTalionario(0);
 		
 		System.out.println("Digite o tipo de conta:\n\t1-poupança \t2-corrente \t3-empresa ");
 		int tipo1 = leia.nextInt();
@@ -138,8 +138,14 @@ public class SeuBanco {
 				System.out.println("Depósitos: R$\t"+valorDeposito);
 				System.out.println("Saques:    R$\t"+ valorSaque);
 				System.out.println("Total:     R$\t"+corrente.getSaldo());
-				System.out.println("Número de talionários disponíveis: "+numTalao);
+				if(corrente.getTalionario()==0) {
+					System.out.println("Você não emitiu talonários ainda");
 				}
+				else {
+				System.out.println("Número do ultimo talonário emitido: "+corrente.getTalionario());
+				}
+			}
+				
 			
 			else if(servico == 3 ) {                                      // 3-Saque
 				System.out.println("Valor que deseja sacar: ");
@@ -169,23 +175,17 @@ public class SeuBanco {
 			
 			else if(servico == 5) {                                     // 5-Talionário
 			   
-				corrente.setTalionario(numTalao);
-				System.out.println("Talionários disponíveis: "+numTalao);
+				
 				System.out.println("Deseja um talionário? Digite S-sim N-não");
 				opcT = leia.next().toUpperCase().charAt(0);
-				
 				if(opcT == 'S') {
 					System.out.println("Retire seu talionário");
-					numTalao = numTalao -1;
-					
-					System.out.println("Número do Talionário: \t"+n);
-					n++;
-				
-					
+					corrente.emiteTalionario();
+					System.out.println("Número do Talionário: \t"+corrente.getTalionario());
+
+	
 				}
-				else {
-					System.out.println("Talionários disponíveis: "+numTalao);
-				}
+
 			}
 			}while(servico !=6);                                     // 6 - OPERAÇÃO FINALIZADA
 				System.out.println("OPERAÇÃO FINALIZADA");

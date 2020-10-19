@@ -18,17 +18,17 @@ public class ContaCorrente extends ContaBancaria {
 		super(nome);
 	}
 	
-		public ContaCorrente(double saldo) {
-		super(saldo);
+	public ContaCorrente(double saldo) {
+	super(saldo);
 	}
-		public int getTalionario() {
-		return talionario;
+	public int getTalionario() {
+	return talionario;
 	}
 	public int setTalionario(int talionario) {
 		return this.talionario = talionario;
 	}
-	public int emiteTalionario(int talionario) {
-		return this.talionario = this.talionario +1;
+	public int emiteTalionario() {
+		return this.talionario++;
 	}
 	
 	
