@@ -15,17 +15,17 @@ public class EstoqueLoja {
 			Atualizar dados da list.
 			Apresentar todos os dados da list.*/
 		
-		Collection <String>nomes = new ArrayList();
-		nomes.add("Calça");
-		nomes.add("Camisa");
-		nomes.add("Vestido");
-		nomes.add("Blusa");
+		Collection <String>estoque = new ArrayList();
+		estoque.add("Calça");
+		estoque.add("Camisa");
+		estoque.add("Vestido");
+		estoque.add("Blusa");
 	
-		System.out.println("Lista de itens: "+nomes);
-		nomes.remove("Calça");
-		System.out.println("Lista de itens: "+nomes);
-		nomes.clear();
-		System.out.println("Lista de itens: "+nomes);
+		System.out.println("Lista de itens: "+estoque);
+		estoque.remove("Calça");
+		System.out.println("Lista de itens: "+estoque);
+		estoque.clear();
+		System.out.println("Lista de itens: "+estoque);
 	}
 
 }

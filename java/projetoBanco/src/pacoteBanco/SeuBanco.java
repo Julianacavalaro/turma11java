@@ -29,6 +29,8 @@ public class SeuBanco {
 		char opcT=' ';
 		int numTalao = 0;
 		corrente.setTalionario(0);
+		int cont =0;
+	
 		
 		System.out.println("Digite o tipo de conta:\n\t1-poupança \t2-corrente \t3-empresa ");
 		int tipo1 = leia.nextInt();
@@ -111,17 +113,9 @@ public class SeuBanco {
 			corrente.setNome(leia.next());
 			System.out.println("Digite o número da conta: ");
 			corrente.setNumero(leia.nextInt());
-			do {
-				if(corrente.getSaldo()>= 3000) {
-					System.out.println("Seu perfil permite uma conta especial, deseja fazer uma?\n\tS-sim \t N-não");
-					opc = leia.next().toUpperCase().charAt(0);
-					if(opc =='S' ) {
-						System.out.println("Conta especial feita com sucesso!");
-						//Colocar menu especial
-				}
-			}
-				
+			do {	
 			
+
 			System.out.println("Digite o serviço desejado: ");
 			System.out.println("\t1-Saldo \t 2-Extrato \t 3-Saque \t 4-Deposito \t 5-Talionário \t 6-Sair ");
 			servico = leia.nextInt();
@@ -129,7 +123,20 @@ public class SeuBanco {
 			if(servico == 1) {                                         // 1-Saldo
 				System.out.println("************************SALDO*************************************");
 				System.out.println("Total:     R$\t"+corrente.getSaldo());
+				
+				if(corrente.getSaldo()>= 3000) {
+					System.out.println("Seu perfil permite uma conta especial, deseja fazer uma?\n\tS-sim \t N-não");
+					opc = leia.next().toUpperCase().charAt(0);
+					
+					if(opc =='S' ) {
+						System.out.println("Conta especial feita com sucesso!");
+						//Colocar menu especial
+						
+					}
+				
 				}
+			}
+			
 			else if(servico == 2) {                                   // 2 -Extrato
 				System.out.println("Valor que deseja sacar: ");
 				System.out.println("************************EXTRATO*****************************");
@@ -189,7 +196,7 @@ public class SeuBanco {
 			}
 			}while(servico !=6);                                     // 6 - OPERAÇÃO FINALIZADA
 				System.out.println("OPERAÇÃO FINALIZADA");
-			}
+		}
 			
 		if ( tipo1 == 3 ){                               //1- ******EMPRESARIAL************
 			System.out.println("Digite o nome do Cliente: ");
@@ -230,7 +237,7 @@ public class SeuBanco {
 				}else{
 					System.out.println("Sacando do seu limite");
 					valorLimite = valorLimite -valorSaque;
-					System.out.println("Seu limite é de: \t"+valorLimite);
+					System.out.println("Limite disponível: \t"+valorLimite);
 				}
 			}
 				
@@ -249,6 +256,7 @@ public class SeuBanco {
 			
 		}
 	}
+		
 }
 		
 		
