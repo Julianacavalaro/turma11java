@@ -20,9 +20,12 @@ public class SeuBanco {
 		double valorJuros=0;
 		double valorCorrecao=0;
 		int servico;
+		double valorDeposit =0;
+		double valorLimite = 3000;
+		double valorLimit = 1000;
 		
-		double valorLimite =1000;
-		System.out.println("*************************| Seu Banco |***********************************************");
+		
+		System.out.println("*************************| Banco Simples |***********************************************");
 		
 		System.out.println("Bom dia!");
 	
@@ -73,7 +76,7 @@ public class SeuBanco {
 				}else{
 					double naoRealizado=0;
 					valorSaque = naoRealizado;
-					System.out.println("Saque de negado saldo disponível: R$"+poupanca.getSaldo());
+					System.out.println("Saque negado, saldo disponível: R$"+poupanca.getSaldo());
 					System.out.println("Impossível sacar mais que o valor total do saldo.");
 				}
 			}
@@ -90,12 +93,14 @@ public class SeuBanco {
 				mes =leia.nextInt();
 				if (mes == 10 ) {
 				valorCorrecao = poupanca.ganhoAniversario(poupanca.getSaldo());
-				System.out.println("Valor da correção monetária: R$"+valorCorrecao);
+				System.out.printf("Valor da correção monetária: R$ %.2f ",valorCorrecao);
+				System.out.println();
 				poupanca.depositar(valorCorrecao);
 			
 				}
 				valorJuros = poupanca.ganhoJuros(poupanca.getSaldo());
-				System.out.println("Valor do juros: R$"+valorJuros);
+				System.out.printf("Valor do juros: R$ %.2f",valorJuros);
+				System.out.println();
 				poupanca.depositar(valorJuros);
 			}
 		}
@@ -114,7 +119,7 @@ public class SeuBanco {
 			
 				System.out.println("*********************CONTA CORRENTE***************************************");
 			System.out.println("Digite o serviço desejado: ");
-			System.out.println("\t1-Saldo \t 2-Extrato \t 3-Saque \t 4-Deposito \t 5-Talionário \t 6-Conta Especial\t 7-Sair ");
+			System.out.println("\t1-Saldo \t 2-Extrato \t 3-Saque \t 4-Deposito \t 5-Talonário \t 6-Conta Especial\t 7-Sair ");
 			servico = leia.nextInt();
 		
 			if(servico == 1) {                                         // 1-Saldo
@@ -174,23 +179,26 @@ public class SeuBanco {
 				}
 				}
 			
-			else if(servico == 5) {                                     // 5-Talionário
+			else if(servico == 5) {                                     // 5-Talonário
 			   
 				
-				System.out.println("Deseja um talionário? Digite S-sim N-não");
+				System.out.println("Deseja um Talonário? Digite S-sim N-não");
 				opcT = leia.next().toUpperCase().charAt(0);
 				if(opcT == 'S') {
-					System.out.println("Retire seu talionário");
+					System.out.println("Retire seu Talonário");
 					corrente.emiteTalionario();
-					System.out.println("Número do Talionário: \t"+corrente.getTalionario());
+					System.out.println("Número do Talonário: \t"+corrente.getTalionario());
 	
 				}
 
 			}
 			if ( servico == 6 ){                               // 1- ******CONTA ESPECIAL************ // 6- Conta especial
 				if(n==true) {
-				valorLimite = 3000;
 				
+				System.out.println("Digite o nome do Cliente: ");
+				especial.setNome(leia.next());
+				System.out.println("Digite o número da conta: ");
+				especial.setNumero(leia.nextInt());
 				
 				do {
 					System.out.println("*********************CONTA ESPECIAL******************************************");
@@ -207,8 +215,9 @@ public class SeuBanco {
 					System.out.println("************************EXTRATO*******************************");
 					System.out.println("Cliente:   "+especial.getNome());
 					System.out.println("Conta bancaria: "+especial.getNumero());
-					System.out.println("Depósitos: R$\t"+valorDeposito);
-					System.out.println("Juros:     R$ \t"+valorJuros);
+					System.out.println("Depósitos: R$\t"+valorDeposit);
+					System.out.printf("Juros:     R$ \t%.2f",valorJuros);
+					System.out.println();
 					System.out.println("Saques:    R$\t"+ valorSaque);
 					System.out.println("Total:     R$\t"+especial.getSaldo());
 					System.out.println("Limite Disponível:R$\t"+valorLimite);
@@ -217,32 +226,29 @@ public class SeuBanco {
 					System.out.println("Valor que deseja sacar: ");
 					valorSaque =leia.nextDouble();
 					
-					System.out.println("Valor que deseja sacar: ");
-					valorSaque =leia.nextDouble();
-					
-					if (valorSaque<=empresa.getSaldo()) {
+					if (valorSaque<=especial.getSaldo()) {
 						System.out.println("Retirado o valor de "+valorSaque);
 						especial.sacar(valorSaque);
 						System.out.println("Saldo atualizado: "+especial.getSaldo());
 					}else{
 						System.out.println("Sacando do seu limite");
-						valorLimite = valorLimite -valorSaque;
+						valorLimite = valorLimite - valorSaque;
 						System.out.println("Limite disponível: \t"+valorLimite);
 					}
 				}
 					
 				else if(servico == 4) {                                       // 4 deposito
 					System.out.println("Quanto deseja depositar?");
-					valorDeposito =leia.nextDouble();
-					especial.depositar(valorDeposito);
-					System.out.println("Depositado o valor de R$"+valorDeposito);
+					valorDeposit =leia.nextDouble();
+					especial.depositar(valorDeposit);
+					System.out.println("Depositado o valor de R$"+valorDeposit);
 					System.out.println("Saldo atualizado: R$"+especial.getSaldo());
-					
 				}
 				else if(servico == 5) {                                    // 5 - correçao monetária e juros
 					
 					valorJuros = especial.calculaJuros(especial.getSaldo());
-					System.out.println("Valor do juros: R$ "+valorJuros);
+					System.out.printf("Valor do juros: R$ %.2f",valorJuros);
+					System.out.println();
 					especial.depositar(valorJuros);
 					}
 				
@@ -289,7 +295,7 @@ public class SeuBanco {
 				System.out.println("Depósitos: R$\t"+valorDeposito);
 				System.out.println("Saques:    R$\t"+ valorSaque);
 				System.out.println("Total:     R$\t"+empresa.getSaldo());
-				System.out.println("Limite Disponível:R$\t"+valorLimite);
+				System.out.println("Limite Disponível:R$\t"+valorLimit);
 			}
 			else if(servico == 3 ) {                                      // 3-Saque
 				System.out.println("Valor que deseja sacar: ");
@@ -301,8 +307,8 @@ public class SeuBanco {
 					System.out.println("Saldo atualizado: "+empresa.getSaldo());
 				}else{
 					System.out.println("Sacando do seu limite");
-					valorLimite = valorLimite -valorSaque;
-					System.out.println("Limite disponível: \t"+valorLimite);
+					valorLimit = valorLimit -valorSaque;
+					System.out.println("Limite disponível: \t"+valorLimit);
 				}
 			}
 				
