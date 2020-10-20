@@ -1,6 +1,6 @@
 package pacoteBanco;
 
-public class  ContaBancaria {
+public abstract class  ContaBancaria {
 	//ATRIBUTOS
 	private String nome;
 	private int numero;

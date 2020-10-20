@@ -7,11 +7,9 @@ public class ContaEspecial extends ContaCorrente {
 		super();
 	}
 
-	public ContaEspecial(double limite) {
-		super();
-		this.limite = limite;
+	public ContaEspecial(double saldo) {
+		super(saldo);
 	}
-	
 
 	public ContaEspecial(double saldo, double limite) {
 		super(saldo);
@@ -29,5 +27,9 @@ public class ContaEspecial extends ContaCorrente {
 	public double calculaJuros(double saldo ) {
 		return super.getSaldo()*0.05 ;
 	}
+	public double calculaSaldo(double saldo,double valorSaque) {
+		return super.getSaldo()-valorSaque;
+	}
+	
 
 }
