@@ -13,6 +13,7 @@ public class SeuBanco {
 		ContaEmpresa empresa = new ContaEmpresa();
 		ContaEspecial especial = new ContaEspecial();
 		
+		double resto =0;
 		double valorSaque =0;
 		valorSaque +=poupanca.getSaldo();
 		double valorDeposito=0;
@@ -239,10 +240,29 @@ public class SeuBanco {
 					
 				else if(servico == 4) {                                       // 4 deposito
 					System.out.println("Quanto deseja depositar?");
-					valorDeposit =leia.nextDouble();
+					valorDeposit = leia.nextDouble();
+					if(valorLimite<3000) {
+						valorLimite = valorLimite + valorDeposit;
+						resto = valorLimite - 3000;
+						if(resto==0) {
+							
+						System.out.println("Limite atualizado: R$"+3000);
+						}
+						else if(resto>0) {
+							especial.depositar(resto);
+							valorLimite = 3000;
+							System.out.println("Limite atualizado: R$"+valorLimite);
+							System.out.println("Saldo atualizado: R$"+especial.getSaldo());
+						}
+						else if (resto<0) {
+							System.out.println("Limite atualizado: R$"+valorLimite);
+						}
+						
+					}
+					else {
 					especial.depositar(valorDeposit);
-					System.out.println("Depositado o valor de R$"+valorDeposit);
 					System.out.println("Saldo atualizado: R$"+especial.getSaldo());
+					}
 				}
 				else if(servico == 5) {                                    // 5 - correçao monetária e juros
 					
